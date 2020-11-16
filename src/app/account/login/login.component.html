@@ -1,0 +1,34 @@
+<header>
+  <div class="container">
+    <form (ngSubmit)="login()" [formGroup]="form">
+      <div class="o-login hidden-mob">
+        <div class="form-group m-8">
+          <input type="text" id="login-username" class="form-control form-control" formControlName="username"
+            placeholder="Username" i18n-placeholder="@@M__COMMON__USERNAME">
+          <div *ngIf="submitted && f.username.errors" class="error text-sm">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+          <div id="invalid-user" *ngIf="errorMessage" class="error text-sm">
+            {{errorMessage}}
+          </div>
+
+
+        </div>
+
+        <div class="form-group c-form_righticon m-8 ">
+          <input type="password" id="login-password" class="form-control" formControlName="password"
+            placeholder="Password">
+          <div *ngIf="submitted && f.password.errors" class="error text-sm">
+            <div *ngIf="f.password.errors.required">password is required</div>
+          </div>
+        </div>
+        <button type="submit" id="login-submit" class="btn btn-outline-primary btn-sm btn-login"
+          [disabled]=!this.form.valid>Login</button>
+      </div>
+
+    </form>
+    <div class="o-login">
+      <a class="btn btn-outline-primary btn-sm" routerLink="../register">Register</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,44 @@
+
+header{
+  width: 100%;
+  padding-top:37px;
+  float: left;
+}
+.logo{
+  width: 210px;
+  float: left;
+  img{
+      width: 100%;
+  }
+}
+.o-login {
+  float: right;
+  display: flex;
+  align-items: flex-start;
+  .m-8{
+      margin: 8px;
+  }
+  .btn--login {
+    margin-top: 6px;
+  }
+}
+
+.main-content{
+  min-height: calc(100vh - 130px);
+  margin: 0px auto 40px auto;
+  width: 91%;
+}
+.opspot-components{
+  width: 100%;
+  background: primary-dark ;
+  height: 273px;
+}
+.flex-row-center{    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 273px;
+  h1, .text-md{
+      color: #fff;
+  }
+  
+}
